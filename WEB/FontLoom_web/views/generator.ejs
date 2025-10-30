@@ -1,0 +1,75 @@
+<% layout('base') %>
+  <link rel="stylesheet" href="/css/generator.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <section class="generator-section">
+    <div class="container">
+      <div class="generator-header">
+        <h1 class="generator-title">Font Generator</h1>
+        <p class="generator-description">
+          Intelligent font recommendations based on default or locked selections.
+        </p>
+      </div>
+
+      <div class="styling-container">
+        <!-- Heading -->
+        <div class="style-box" data-font-default="Playfair Display">
+          <div class="box-header">
+            <h3>Heading - <span class="current-font">Playfair Display</span></h3>
+            <button class="lock-btn" data-target="heading">🔓</button>
+          </div>
+          <textarea class="ta-default" data-target="heading" style="font-family: 'Playfair Display', serif">
+The quick brown fox jumps over the lazy dog.</textarea>
+          <div class="font-size-control">
+            <label>Font Size: <span class="size-value">32px</span></label>
+            <input type="range" min="20" max="80" value="32" class="size-slider" data-target="heading" />
+          </div>
+          <button class="generate-btn btn btn-outline-primary" data-target="heading">
+            Generate Style
+          </button>
+        </div>
+
+        <!-- Subheading -->
+        <div class="style-box" data-font-default="Poppins">
+          <div class="box-header">
+            <h3>Subheading – <span class="current-font">Poppins</span></h3>
+            <button class="lock-btn" data-target="subheading">🔓</button>
+          </div>
+          <textarea class="ta-default" data-target="subheading" style="font-family: 'Poppins', sans-serif">
+The quick brown fox jumps over the lazy dog.</textarea>
+          <div class="font-size-control">
+            <label>Font Size: <span class="size-value">24px</span></label>
+            <input type="range" min="16" max="60" value="24" class="size-slider" data-target="subheading" />
+          </div>
+          <button class="generate-btn btn btn-outline-primary" data-target="subheading">
+            Generate Style
+          </button>
+        </div>
+
+        <!-- Paragraph -->
+        <div class="style-box" data-font-default="Dancing Script">
+          <div class="box-header">
+            <h3>Paragraph – <span class="current-font">Dancing Script</span></h3>
+            <button class="lock-btn" data-target="paragraph">🔓</button>
+          </div>
+          <textarea class="ta-default" data-target="paragraph" style="font-family: 'Dancing Script', handwriting">The quick brown fox jumps over the lazy dog.1 2 3 4 5 6 7 8 9 0</textarea>
+          <div class="font-size-control">
+            <label>Font Size: <span class="size-value">18px</span></label>
+            <input type="range" min="12" max="48" value="18" class="size-slider" data-target="paragraph" />
+          </div>
+          <button class="generate-btn btn btn-outline-primary" data-target="paragraph">
+            Generate Style
+          </button>
+        </div>
+      </div>
+
+      <div class="global-actions">
+        <button class="generate-all-btn btn btn-primary" style="cursor: pointer;">
+          Generate All Styles
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script type="module"  src="/js/generator.js"></script>

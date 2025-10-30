@@ -1,0 +1,272 @@
+/* ================================
+   Fontology - Font Generator Page
+   (Redesigned Styling Playground)
+================================ */
+
+.generator-section {
+  padding: var(--spacing-xl) 0;
+}
+
+.generator-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.generator-title {
+  margin-bottom: var(--spacing-sm);
+}
+
+.generator-description {
+  font-size: 1.125rem;
+  color: var(--color-navy-light);
+  line-height: 1.6;
+}
+
+/* ---------------------------
+   Font Styling Playground
+----------------------------*/
+.styling-container {
+  margin-top: var(--spacing-xxl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.style-box {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-smooth);
+}
+
+.style-box:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.box-header h3 {
+  font-size: 1.25rem;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.lock-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--color-navy-light);
+  transition: color var(--transition-fast);
+}
+
+.lock-btn:hover {
+  color: var(--color-gold);
+}
+
+.ta-default {
+  width: 100%;
+  height: 120px;
+  font-size: 1.25rem;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-navy-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-navy);
+  resize: vertical;
+  outline: none;
+  margin-bottom: var(--spacing-md);
+  transition: border-color var(--transition-fast);
+}
+
+.ta-default:focus {
+  border-color: var(--color-gold);
+}
+
+.control-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.control-group {
+  flex: 1;
+  min-width: 240px;
+}
+
+.control-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--color-navy);
+}
+
+.size-slider {
+  width: 100%;
+  accent-color: var(--color-gold);
+  transition: all var(--transition-fast);
+}
+
+.size-value {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: var(--color-navy-light);
+}
+
+.weight-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.weight-btn {
+  font-size: 0.875rem;
+  padding: 0.4rem 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.weight-btn.active,
+.weight-btn:hover {
+  background-color: var(--color-gold);
+  color: #fff;
+  border-color: var(--color-gold);
+}
+
+.generate-btn {
+  width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: var(--radius-sm);
+  background-color: #ffffff;
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.generate-btn:hover {
+  background-color: var(--color-gold);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(218, 165, 32, 0.25);
+}
+
+.generate-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(218, 165, 32, 0.2);
+}
+.style-box .generate-btn {
+  margin-top: 0.75rem;
+}
+
+/* ---------------------------
+   Global Actions
+----------------------------*/
+.global-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.global-actions .btn {
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.global-actions .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------------------------
+   Responsive Adjustments
+----------------------------*/
+@media (max-width: 768px) {
+  .styling-container {
+    gap: var(--spacing-md);
+  }
+
+  .control-wrapper {
+    flex-direction: column;
+  }
+
+  .ta-default {
+    height: 100px;
+  }
+
+  .box-header h3 {
+    font-size: 1.1rem;
+  }
+}
+.disabled-btn {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* ---------------------------
+   Font Size Slider Control
+----------------------------*/
+.font-size-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.font-size-control label {
+  font-weight: 600;
+  color: var(--color-navy);
+  font-size: 0.95rem;
+}
+
+.size-slider {
+  flex: 1;
+  accent-color: var(--color-gold);
+  height: 6px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(to right, var(--color-gold), var(--color-navy-light));
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.size-slider:hover {
+  filter: brightness(1.1);
+}
+
+.size-value {
+  font-weight: 500;
+  color: var(--color-navy-light);
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .font-size-control {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .font-size-control label {
+    font-size: 0.9rem;
+  }
+
+  .size-slider {
+    width: 100%;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= typeof description !== 'undefined' ? description : 'FontVerse - Discover your perfect typography with AI-powered font recommendations, curated galleries, and personalized suggestions.' %>">
+  <title><%= typeof title !== 'undefined' ? title : 'FontVerse - Discover Your Perfect Typography' %></title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="<%= typeof pageClass !== 'undefined' ? pageClass : '' %>">
+  <%- include('partials/header') %>
+  
+  <main>
+    <%- body %>
+  </main>
+  
+  <%- include('partials/footer') %>
+</body>
+</html>

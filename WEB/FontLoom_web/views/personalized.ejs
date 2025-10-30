@@ -1,0 +1,56 @@
+<% layout('base') %>
+<link rel="stylesheet" href="/css/personalized.css">
+
+<section class="personalized-section">
+  <div class="container">
+    <div class="personalized-header">
+      <h1 class="personalized-title" data-testid="text-page-title">
+        Personalized Recommendations
+      </h1>
+      <p class="personalized-description" data-testid="text-page-description">
+        Build your unique typographic profile by selecting fonts you love. Our intelligent system 
+        analyzes your preferences to recommend fonts that match your style and complement your selections.
+      </p>
+    </div>
+    
+    <div class="instructions">
+      <p class="instructions-text" data-testid="text-instructions">
+        Click on fonts you like to add them to your profile. Selected fonts will be highlighted with a checkmark.
+      </p>
+    </div>
+    
+    <div class="font-selection-grid" id="font-selection" data-testid="container-font-selection">
+      <% const fonts = [
+           { name: 'Cormorant Garamond', category: 'serif' },
+           { name: 'Inter', category: 'sans-serif' },
+           { name: 'Playfair Display', category: 'serif' },
+           { name: 'Montserrat', category: 'sans-serif' },
+           { name: 'Lato', category: 'sans-serif' },
+           { name: 'Merriweather', category: 'serif' },
+           { name: 'Roboto', category: 'sans-serif' },
+           { name: 'Open Sans', category: 'sans-serif' },
+           { name: 'Poppins', category: 'sans-serif' }
+         ]; 
+      %>
+
+      <% fonts.forEach(font => { %>
+        <div class="selectable-font-card" data-font="<%= font.name %>" data-testid="card-font-<%= font.name %>">
+            <div class="selectable-font-name" style="font-family: '<%= font.name %>', <%= font.category==='serif' ? 'serif' : 'sans-serif' %>;">
+            <%= font.name %>
+          </div>
+          <span class="selectable-font-category"><%= font.category %></span>
+        </div>
+      <% }) %>
+    </div>
+    
+    <div class="generate-section">
+      <button id="generate-btn" class="btn btn-gold" data-testid="button-generate-style">
+        Generate My Style
+      </button>
+    </div>
+    
+    <div id="personalized-results" data-testid="container-results"></div>
+  </div>
+</section>
+
+<script type="module" src="/js/personalized.js"></script>

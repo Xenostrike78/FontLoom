@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | FontVerse</title>
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="/" class="logo-text">FontLoom</a>
+      <ul class="nav-links">
+        <li><a href="/" class="<%= currentUrl === '/' ? 'active' : '' %>">Home</a></li>
+        <li><a href="/gallery" class="<%= currentUrl.startsWith('/gallery') ? 'active' : '' %>">Gallery</a></li>
+        <li><a href="/personalization" class="<%= currentUrl.startsWith('/personalization') ? 'active' : '' %>">Personalized Picks</a></li>
+        <li><a href="/recommendation" class="<%= currentUrl.startsWith('/recommendation') ? 'active' : '' %>">Generator</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container">
+    <%- body %>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-text">&copy; <%= new Date().getFullYear() %> FontLoom <br> <b>Design & Developed by Arbaaz Khan</b></p>
+    </div>
+  </footer>
+</body>
+</html>

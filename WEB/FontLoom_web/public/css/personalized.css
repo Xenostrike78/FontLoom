@@ -1,0 +1,234 @@
+/* Personalized Page Styles */
+
+.personalized-section {
+  padding: var(--spacing-xl) 0;
+}
+
+.personalized-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.personalized-title {
+  margin-bottom: var(--spacing-sm);
+}
+
+.personalized-description {
+  font-size: 1.125rem;
+  color: var(--color-navy-light);
+  line-height: 1.6;
+}
+
+.instructions {
+  background-color: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid var(--color-navy-border);
+}
+
+.instructions-text {
+  font-size: 1rem;
+  color: var(--color-navy);
+  font-weight: 500;
+  margin: 0;
+}
+
+.font-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.selectable-font-card {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-navy-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.selectable-font-card:hover {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.selectable-font-card.liked {
+  border-color: var(--color-gold);
+  background-color: rgba(184, 134, 11, 0.05);
+  box-shadow: var(--shadow-md);
+}
+
+.selectable-font-card.liked::before {
+  content: '✓';
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.selectable-font-card {
+  position: relative;
+}
+
+.selectable-font-name {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-navy);
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.selectable-font-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.generate-section {
+  text-align: center;
+  margin: var(--spacing-xl) 0;
+}
+
+#generate-btn {
+  display: inline-block;
+  min-width: 280px;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: 2px solid var(--color-gold);
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: all var(--transition-smooth);
+  box-shadow: 0 4px 14px rgba(184, 134, 11, 0.15);
+}
+
+#generate-btn:hover {
+  background-color: transparent;
+  color: var(--color-gold);
+  box-shadow: 0 4px 18px rgba(184, 134, 11, 0.25);
+  transform: translateY(-2px);
+}
+
+#generate-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(184, 134, 11, 0.15);
+}
+
+
+#personalized-results {
+  margin-top: var(--spacing-xl);
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.results-title {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.results-subtitle {
+  font-size: 1rem;
+  color: var(--color-navy-light);
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.suggestion-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-smooth);
+}
+
+.suggestion-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.suggestion-font-name {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-navy);
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.suggestion-font-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+}
+
+.suggestion-font-description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-navy-light);
+}
+
+.loading {
+  text-align: center;
+  padding: var(--spacing-xl);
+  font-size: 1.125rem;
+  color: var(--color-navy-light);
+}
+
+.error {
+  background-color: rgba(128, 0, 32, 0.1);
+  border: 1px solid var(--color-maroon);
+  color: var(--color-maroon);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin: var(--spacing-md) 0;
+}
+
+@media (max-width: 768px) {
+  .font-selection-grid,
+  .suggestions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  #generate-btn {
+    min-width: 100%;
+  }
+}

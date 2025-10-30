@@ -1,0 +1,23 @@
+FROM python:3.11-slim
+
+# Prevents Python from writing .pyc files to disk
+ENV PYTHONDONTWRITEBYTECODE=1
+# Ensures output is shown immediately in logs
+ENV PYTHONUNBUFFERED=1
+
+# set up working dir
+WORKDIR /app
+
+# installation
+COPY requirement.txt .
+RUN apt-get update && pip install --no-cache-dir -r requirement.txt
+
+# copying whole project
+COPY . .
+
+WORKDIR /app/FontLoom_model
+
+EXPOSE 8000
+
+# Command to run Django
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

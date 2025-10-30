@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  django:
+    build:
+      context: ./MODEL
+      dockerfile: DockerFile.django
+    container_name: fontloom_model
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./MODEL:/app"    
+    environment:
+      - PYTHONUNBUFFERED=1
+  
+  node:
+    build: 
+      context: ./WEB
+      dockerfile: DockerFile.node
+    container_name: fontloom_web
+    ports:
+      - "3000:3000"
+    environment:
+      - API_BASE_URL=http://django:8000
+    depends_on:
+      - django
+    volumes:
+      - ./WEB/FontLoom_web:/app

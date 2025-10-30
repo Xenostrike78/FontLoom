@@ -1,0 +1,50 @@
+# Core Django & utilities
+Django==5.0.4
+asgiref==3.8.1
+djangorestframework==3.15.2
+django-cors-headers==4.7.0
+django-crispy-forms==2.1
+django-filter==24.2
+django-ratelimit==4.1.0
+whitenoise==6.6.0
+
+# Async & Channels (for WebSockets)
+channels==4.2.2
+daphne==4.2.0
+
+# ML & Data
+numpy==2.1.0
+pandas==2.2.2
+scikit-learn==1.7.2
+scipy==1.16.2
+joblib==1.5.2
+matplotlib==3.10.5
+seaborn==0.13.2
+
+# Utils
+requests==2.32.3
+tqdm==4.67.1
+pillow==10.4.0
+qrcode==7.4.2
+razorpay==1.4.2
+
+# PDF & Excel (if used)
+openpyxl==3.1.5
+
+# Security & Email
+cryptography==43.0.0
+django-anymail==13.0
+
+# DB Connector (use only one)
+mysql-connector-python==9.2.0
+# or
+# psycopg2-binary==2.9.9   # if using PostgreSQL
+
+# HTML parsing
+beautifulsoup4==4.12.3
+lxml==5.4.0
+
+# Misc
+python-dateutil==2.9.0.post0
+pytz==2024.1
+tzdata==2024.1
