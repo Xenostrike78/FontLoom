@@ -20,7 +20,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - API_BASE_URL=http://django:8000
+      - DOCKER_ENV=true
     depends_on:
       - django
     volumes:

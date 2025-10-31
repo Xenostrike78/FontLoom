@@ -1,0 +1,63 @@
+/* Info / About Section */
+/* ===== Section Divider ===== */
+.section-divider {
+  border: none;
+  border-top: 2px solid var(--color-gold);
+  width: 60%;
+  margin: var(--spacing-xl) auto;
+  opacity: 0.6;
+}
+
+/* ===== Info / About Section ===== */
+.info-section {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-white);
+  color: var(--color-navy);
+}
+
+.info-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-description {
+  max-width: 750px;
+  margin: 0 auto var(--spacing-md);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-navy-light);
+}
+
+.footer-contribution {
+  margin-top: var(--spacing-lg);
+  font-size: 1.1rem;
+  color: var(--color-navy);
+}
+
+.github-link {
+  color: var(--color-gold);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-smooth);
+}
+
+.github-link:hover {
+  color: var(--color-navy);
+  border-bottom: 2px solid var(--color-gold);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .info-title {
+    font-size: 1.6rem;
+  }
+
+  .info-description {
+    font-size: 1rem;
+    padding: 0 var(--spacing-md);
+  }
+}

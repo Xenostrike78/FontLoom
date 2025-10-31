@@ -35,9 +35,11 @@
   color: var(--color-navy);
 }
 
+
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, auto); 
+  justify-content: center;                
   gap: var(--spacing-lg);
   margin-top: var(--spacing-lg);
 }
@@ -52,7 +54,10 @@
   text-decoration: none;
   color: var(--color-navy);
   display: block;
-}
+} 
+
+
+
 
 .feature-card:hover {
   box-shadow: var(--shadow-md);
@@ -92,3 +97,22 @@
     gap: var(--spacing-md);
   }
 }
+
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, auto); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr; /* Stack cards on mobile */
+    justify-content: center;
+  }
+
+  .feature-card {
+    width: 90%; /* Take most of screen width on small devices */
+    max-width: none;
+  }
+}
+
