@@ -10,6 +10,7 @@ function getFallbackFont(category) {
       default: return "sans-serif";
     }
   }
+
 document.addEventListener('DOMContentLoaded', () => {
   let API_BASE_URL = null;
 

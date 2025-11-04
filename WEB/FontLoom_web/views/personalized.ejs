@@ -21,21 +21,33 @@
     
     <div class="font-selection-grid" id="font-selection" data-testid="container-font-selection">
       <% const fonts = [
-           { name: 'Cormorant Garamond', category: 'serif' },
-           { name: 'Inter', category: 'sans-serif' },
-           { name: 'Playfair Display', category: 'serif' },
-           { name: 'Montserrat', category: 'sans-serif' },
-           { name: 'Lato', category: 'sans-serif' },
-           { name: 'Merriweather', category: 'serif' },
-           { name: 'Roboto', category: 'sans-serif' },
-           { name: 'Open Sans', category: 'sans-serif' },
-           { name: 'Poppins', category: 'sans-serif' }
+          { name: 'Playfair Display', category: 'serif' },      // Elegant serif for headings
+          { name: 'Merriweather', category: 'serif' },          // Classic, readable serif
+          { name: 'Lora', category: 'serif' },                  // Warm and modern serif
+
+          // Sans-serif → sans-serif
+          { name: 'Inter', category: 'sans-serif' },            // Modern UI sans
+          { name: 'Poppins', category: 'sans-serif' },          // Geometric, friendly
+          { name: 'Montserrat', category: 'sans-serif' },       // Corporate, clean sans
+          { name: 'Raleway', category: 'sans-serif' },          // Elegant thin sans
+          { name: 'Nunito', category: 'sans-serif' },           // Rounded, casual sans
+
+          // Display → fantasy
+          { name: 'Bebas Neue', category: 'fantasy' },          // Bold display font
+          { name: 'Press Start 2P', category: 'fantasy' },      // Retro pixel-style font
+          { name: 'Lobster', category: 'fantasy' },             // Decorative branding font
+
+          // Handwriting / Cursive → cursive
+          { name: 'Dancing Script', category: 'cursive' },      // Flowing handwritten
+          { name: 'Pacifico', category: 'cursive' },            // Playful cursive
+          { name: 'Great Vibes', category: 'cursive' },         // Elegant calligraphic
+
          ]; 
       %>
 
       <% fonts.forEach(font => { %>
         <div class="selectable-font-card" data-font="<%= font.name %>" data-testid="card-font-<%= font.name %>">
-            <div class="selectable-font-name" style="font-family: '<%= font.name %>', <%= font.category==='serif' ? 'serif' : 'sans-serif' %>;">
+            <div class="selectable-font-name" style="font-family: '<%= font.name %>', <%= font.category %>;">
             <%= font.name %>
           </div>
           <span class="selectable-font-category"><%= font.category %></span>
