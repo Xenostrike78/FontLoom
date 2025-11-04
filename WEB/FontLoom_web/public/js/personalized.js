@@ -49,11 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
         try {
-          const query = encodeURIComponent(likedFonts.join(','));
-          console.log(query);
-          
+          const query = encodeURIComponent(likedFonts.join(','));          
           const apiUrl = `${API_BASE_URL}/api/personalized?font_names=${query}`;
           console.log("SENDING REQUEST");
+
           const response = await fetch(apiUrl);
           if (!response.ok) {
             throw new Error('Failed to fetch personalized recommendations');
@@ -93,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       function displayResults(data) {
-        console.log(data);
         
         if (!data.suggestions || data.suggestions.length === 0) {
           resultsContainer.innerHTML = `

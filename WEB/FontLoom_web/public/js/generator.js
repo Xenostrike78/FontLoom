@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
           const res = await fetch(`${apiUrl}?font_names=${encodeURIComponent(query)}`);
           const data = await res.json();
-          console.log("All recommendations:", data);
 
           if (data.recommendations && data.recommendations.length > 0) {
             applyRecommendations(data.recommendations);

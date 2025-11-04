@@ -24,7 +24,6 @@ def pick_unique_category_fonts(recommendations, category_map, limit=3):
         # Skip if category already used
         if category in used_categories:
             continue
-        print(category)
         chosen.append({"name": font_name, "category": category})
         used_categories.add(category)
 
