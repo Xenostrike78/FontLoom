@@ -154,6 +154,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const ta = document.querySelector(`textarea[data-target="${target}"]`);
         const valueLabel = slider.closest(".font-size-control").querySelector(".size-value");
 
+        const initialSize = `${slider.value}px`;
+        ta.style.fontSize = initialSize;
+        valueLabel.textContent = initialSize;
+
         slider.addEventListener("input", () => {
           const newSize = `${slider.value}px`;
           ta.style.fontSize = newSize;
