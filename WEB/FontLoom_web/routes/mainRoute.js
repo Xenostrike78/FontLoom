@@ -24,8 +24,9 @@ router.get("/gallery", async (req, res) => {
   const content = { title: "Font Gallery | FontLoom", currentUrl: req.path,galleryData:[] };
 
   try {
-    API_BASE_URL = "https://fontloom-model.onrender.com"  
-    const response = await fetch(`${API_BASE_URL}/api/gallery`);
+      
+    const response = await fetch(`https://fontloom-model.onrender.com/api/gallery`);
+    // const response = await fetch(`${API_BASE_URL}/api/gallery`);
     if (!response.ok) throw new Error("Failed to fetch gallery data");
 
     const apiData = await response.json();
