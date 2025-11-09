@@ -10,7 +10,8 @@ router.use((req, res, next) => {
 });
 
 router.get("/get-api-url", (req, res) => {
-  res.json({ apiUrl: "http://localhost:8000" });
+  // res.json({ apiUrl: "http://localhost:8000" });
+  res.json({ apiUrl: "https://fontloom-model.onrender.com" });
 });
 
 router.get("/", (req, res) => {
@@ -23,8 +24,7 @@ router.get("/gallery", async (req, res) => {
   const content = { title: "Font Gallery | FontLoom", currentUrl: req.path,galleryData:[] };
 
   try {
-    console.log(API_BASE_URL);
-    
+    API_BASE_URL = "https://fontloom-model.onrender.com"  
     const response = await fetch(`${API_BASE_URL}/api/gallery`);
     if (!response.ok) throw new Error("Failed to fetch gallery data");
 
